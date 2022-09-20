@@ -8,13 +8,8 @@ VERSION:	Versoin Number
 [TABLE OF CONTENTS]
 -------------------------------------------------------------------*/
 /*  typography */
-@import url("https://fonts.googleapis.com/css?family=Playfair+Display:400,700|Roboto:300,400,500,700");
-@font-face {
-  font-family: 'BwNistaInt-xBd';
-  src: url("../plugins/fonts/BwNistaInt-xBd.woff") format("woff");
-  font-style: normal;
-  font-display: swap;
-}
+
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 /* ---reset.css--- */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -433,7 +428,7 @@ a:hover {
 }
 .navbar .nav-item {margin-right: 10px;}
 .navbar .nav-item .nav-link {
-  font-family: "BwNistaInt-xBd";
+  font-family: ;
   text-transform: uppercase;
   padding: 15px;
   padding: 10px 15px;
@@ -477,7 +472,14 @@ menu ul li:nth-child(6){ background-color:#d3bfe4 ;} */
   position: relative;
  
 }
-
+@media (max-width:1367px) {
+  .hero-area{
+    height:780px;}
+}
+@media (max-width:991px) {
+  .hero-area{
+    height: 100vh;}
+}
 @media (max-width: 767px) {
   .hero-area {
     padding: 250px 0 150px;
@@ -526,6 +528,7 @@ menu ul li:nth-child(6){ background-color:#d3bfe4 ;} */
     transform: translate(0, 0);
   }
 }
+
 .layer {
   position: absolute;
   z-index: 2
@@ -538,10 +541,10 @@ menu ul li:nth-child(6){ background-color:#d3bfe4 ;} */
 
 #l2 {
   top: 90px;
-  right:calc(50% + 550px) 
+  right:calc(50% - 1133px) 
 }
 #l2 img{
-  width: 442px;
+  width: 2266px;
 }
 #l3 {
   z-index: 0;
@@ -552,23 +555,25 @@ menu ul li:nth-child(6){ background-color:#d3bfe4 ;} */
   width: 2400px;
 }
 #l4 {
-  top: 400px;
-  right: 10%;
+  top:40px;
+  right:calc(50% - 1011px) 
 }
-
+#l4 img{
+  width: 2022px;
+}
 #l5 {
-  top: 200px;
-  left:calc(50% + 550px) 
+  top: 0;
+    left: calc(50% - 1075px);
 }
 #l5 img{
-  width: 494px;
+  width: 2150px;
 }
 #l6 {
-  bottom: -20px;
-  right:calc(50% + 100px) 
+  bottom: 0px;
+  right:calc(50% + 400px) 
 }
 #l6 img{
-  width: 537px;
+  width: 192px;
 }
 #l7 {
   top: 20px;
@@ -584,10 +589,10 @@ left:calc(50% + 280px)
 #l8 img{width:258px}
 #l9 {
   bottom: 100px;
-  left:calc(50% + 150px) 
+  left:calc(50% + 450px) 
 }
 #l9 img{
-width: 575px;
+width: 266px;
 }
 
 .layer-bg {
@@ -611,7 +616,6 @@ width: 575px;
   display: none;
 }
 @media (max-width: 991px) {
-  .hero-area{height: 100vh;}
   .layer-bg,.layer{
     display: none;
   }
@@ -967,7 +971,8 @@ width: 575px;
 /* countdown */
 .tick {
   width: 100%;padding: 0;
-  font-size:1rem; white-space:nowrap; font-family:arial,sans-serif;
+  font-size:1rem; white-space:nowrap; 
+  font-family: 'Anton', sans-serif;
 }
 
 .tick-flip,.tick-text-inline {
@@ -1197,7 +1202,27 @@ width: 575px;
       transform: translate(0, 10px) scale(1.02);
     }
   }
-
+  
+.fuwafuwa3 {
+    animation: fuwafuwa3 6s linear infinite forwards;
+  }
+  @keyframes fuwafuwa3 {
+    0% {
+      transform: translate(0, -10px) scale(0.98);
+    }
+    25% {
+      transform: translate(0, 0) scale(1);
+    }
+    50% {
+      transform: translate(0, 10px) scale(1.02);
+    }
+    75% {
+      transform: translate(0, 0) scale(1);
+    }
+    100% {
+      transform: translate(0, -10px) scale(0.98);
+    }
+  }
 
 /*Go to top回頂端 button*/ 
 a.my-btn-goTop {
