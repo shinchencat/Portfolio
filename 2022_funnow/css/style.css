@@ -1176,8 +1176,8 @@ width: 266px;
   width: 100%;
   height: 3000px;
   background: url(../images/bg_scroll01.png) top center no-repeat;
-  margin-right: -15px;
-  margin-left: -15px;
+  /* margin-right: -15px;
+  margin-left: -15px; */
   margin-top: -4000px;
 }
 .bb3 {
@@ -1186,8 +1186,8 @@ width: 266px;
   height: 3600px;
   background: url(../images/bg_scroll02.png) top center no-repeat;
   margin-top: -3400px;
-  margin-right: -15px;
-  margin-left: -15px;
+  /* margin-right: -15px;
+  margin-left: -15px; */
 }
 
 
