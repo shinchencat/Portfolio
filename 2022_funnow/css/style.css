@@ -91,7 +91,7 @@ h6, .h6 {
 }
 
 /* Button style */
-.btn {
+/* .btn {
   font-size: 22px;
   font-family: "Playfair Display", serif;
   text-transform: capitalize;
@@ -111,8 +111,8 @@ h6, .h6 {
 
 .btn:active {
   box-shadow: none;
-}
-
+} */
+/* 
 .btn-sm {
   font-size: 15px;
   padding: 10px 30px;
@@ -130,9 +130,9 @@ h6, .h6 {
 
 .btn-primary:active {
   background: #fdce1f !important;
-}
+} */
 
-.btn-primary:hover {
+/* .btn-primary:hover {
   background: #f1c600;
 }
 
@@ -149,7 +149,7 @@ h6, .h6 {
 
 .btn-transparent:active, .btn-transparent:hover {
   color: #f1c600;
-}
+} */
 
 body {
   overflow-x: hidden;
@@ -266,13 +266,13 @@ a:hover {
   opacity: .5;
 }
 
-.outline-0 {
+/* .outline-0 {
   outline: 0 !important;
 }
 
 .d-unset {
   display: unset !important;
-}
+} */
 
 .bg-primary {
   background:url(../images/sky.png) repeat #fdce1f !important;
@@ -296,7 +296,7 @@ a:hover {
 }
 
 .text-light {
-  color: #999999 !important;
+  color: #fcc400 !important
 }
 
 .mb-10 {
@@ -732,7 +732,7 @@ width: 266px;
 
 }
 /* service */
-.hover-bg-primary {
+/* .hover-bg-primary {
   transition: .3s ease;
 }
 
@@ -747,7 +747,7 @@ width: 266px;
 .active-bg-primary {
   transition: .3s ease;
   background: #f1c600;
-}
+} */
 
 
 
@@ -769,7 +769,7 @@ width: 266px;
 
 /* /service */
 /* portfolio */
-.hover-wrapper {
+/* .hover-wrapper {
   overflow: hidden;
 }
 
@@ -787,8 +787,8 @@ width: 266px;
 .hover-wrapper:hover .hover-overlay {
   opacity: 1;
   visibility: visible;
-}
-
+} */
+/* 
 .hover-overlay {
   position: absolute;
   height: 100%;
@@ -810,7 +810,7 @@ width: 266px;
   left: 0;
   right: 0;
   text-align: center;
-}
+} */
 
 /* /portfolio */
 
