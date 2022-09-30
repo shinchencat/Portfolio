@@ -910,7 +910,7 @@ width: 266px;
 .tick-label {
    color:#f1c600 !important; 
 }
-
+.tick-flip-card{font-family: 'Anton', sans-serif;}
 .tick-flip-panel {
    color: rgb(18, 53, 181) !important; 
 }
