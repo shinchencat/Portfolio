@@ -276,7 +276,6 @@ li {
 
 /* PC */
 .WRAPPER {
-  background: #dff1e5;
   position: relative;
   width: 100%;
   min-width: 1160px;
@@ -720,12 +719,8 @@ a.my-btn-goTop.show {
       --tw-rotate: 0deg;
       transition-property: all;
       transition-timing-function: cubic-bezier(.4, 0, .2, 1);
-      transition-duration: 150ms  ;
-      -webkit-transform: translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-      -moz-transform: translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-      -ms-transform: translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-      -o-transform: translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
+      transition-duration: 150ms
+  }
 }
 
 .ui-sidepanel .menu-box {

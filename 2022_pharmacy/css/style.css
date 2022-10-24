@@ -54,7 +54,7 @@
   width: calc(20% - 12px);
   background-color: #fff;
   border-radius: 12px;
-    overflow: hidden;
+    overflow: hidden;box-shadow: 1px 1px 4px #44444459;
 }
 
 @media screen and (max-width: 991px) {
@@ -146,7 +146,7 @@
   .box-5p .font p {}
 
   .box-5p .font .price {
-    margin: 1vw 0;
+
   }
 
   .box-5p img {
@@ -231,7 +231,7 @@
   text-align: center;
   overflow: hidden;
   
-  box-shadow: 0px 0px 5px 3px #ffffff inset;
+  box-shadow: 0px 0px 7px 6px #ffffff inset;
 
 }
 @media screen and (max-width:991px) {
@@ -462,6 +462,7 @@ ul.box-oneplus6 .itemlist {
   -moz-border-radius: 12px;
   -ms-border-radius: 12px;
   -o-border-radius: 12px;
+  box-shadow: 1px 1px 4px #44444459;
 }
 ul.box-oneplus6 .itemlist img{
   width: 100%;
@@ -736,4 +737,24 @@ ul.box-oneplus6 .itemlist .font p{margin: 0;
     right: auto;
   }
 
+}
+
+
+
+/*******/
+.floating_pic1{
+  position: absolute;
+    top: 0;
+    z-index: 13;
+    pointer-events: none;
+    width: 100%;
+    background: url(../images/floating1.png) top center no-repeat;height: 1602px;
+}
+.floating_pic2{
+  position: absolute;
+    top: -900px;
+    z-index: 13;
+    pointer-events: none;
+    width: 100%;
+    background: url(../images/floating2.png) top center no-repeat;height: 1662px;
 }
