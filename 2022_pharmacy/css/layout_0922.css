@@ -459,7 +459,7 @@ a.my-btn-goTop.show {
   }
 }
  
-.kv_pharmacy{
+.kv_phy{
   position: absolute;
   z-index: 3;
   top: 406px;
@@ -467,13 +467,13 @@ a.my-btn-goTop.show {
   height:390px;
 }  
 @media screen and (max-width:1366px){
-  .kv_pharmacy{
+  .kv_phy{
     top: 370px;
     left: -80px;width: 839px;
     height: 337px;}
 }
 @media screen and (max-width:991px){
-  .kv_pharmacy{
+  .kv_phy{
     position: relative;
     top:auto;
     left: -25vw;
