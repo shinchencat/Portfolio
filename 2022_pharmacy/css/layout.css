@@ -276,6 +276,7 @@ li {
 
 /* PC */
 .WRAPPER {
+  background: #dff1e5;
   position: relative;
   width: 100%;
   min-width: 1160px;
@@ -383,7 +384,8 @@ a.my-btn-goTop.show {
     padding: 0;
     height:auto;
     background: url(../images/KV.jpg) top center no-repeat #dff1e5;
-    background-size: auto
+    background-size: auto;
+    z-index: 2;
   }
 .header-container{
   width: 98%;
@@ -1065,7 +1067,7 @@ background-size:cover;}
       }
 
       body {
-        background: #dff1e5;
+        
         color: #000;
       }
 
@@ -1180,6 +1182,7 @@ display: none;
 /* 半圓形背景*/
 .imageWrapper {
   position: absolute;
+  z-index: 1;
   top: 20px;
   left: 0;
   width:95vw;
@@ -1253,7 +1256,7 @@ section.bg-moveup::before{
   position: absolute;
   top: -50%;
   left: -50%;
-  z-index: -1;
+  z-index:0;
   opacity: 1;
   background-image: url(../images/icon-bg.png);
   animation: wrapperbgTrans1 30s linear infinite;
@@ -1286,7 +1289,7 @@ footer {
   height: 480px;
   position: relative;
 }
-footer::after{
+footer::before{
   content: '';
   display: block;
   width: 100%;
@@ -1295,7 +1298,7 @@ footer::after{
   position: absolute;
   bottom: 0;
   left: 0;
-  z-index: -1;
+  z-index:0;
 
 }
 footer .leftpic{
@@ -1324,7 +1327,7 @@ footer .righttxt p {
 }
 @media screen and (max-width:1366px) {
   footer {height: 380px;}
-  footer::after{height: 270px;}
+  footer::before{height: 270px;}
   footer .leftpic{
     border-radius:0 200px 0 0;
     -webkit-border-radius:0 200px 0 0;
@@ -1345,7 +1348,7 @@ footer .righttxt p {
     -ms-border-radius:0 150px 0 0;
     -o-border-radius:0 150px 0 0;
 }
-  footer::after{display: none;}
+  footer::before{display: none;}
   footer .righttxt{
     padding-top: 80px;
     padding-bottom: 80px;
