@@ -33,7 +33,7 @@
 	<!-- Bootstrap -->
 	<link rel="stylesheet" href="bootstrap/bootstrap.min.css">
 	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-	<link type="text/css" href="css/layout.css" rel="stylesheet" />
+	<link type="text/css" href="css/layout1026.css" rel="stylesheet" />
 	<link type="text/css" href="css/style.css" rel="stylesheet" />
 	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;500&display=swap" rel="stylesheet">
@@ -61,17 +61,20 @@
 <body>
 
 	<div class="WRAPPER">
+		<!-- popsaleＡＤ -->
+		<div class="box-popsale  animate__animated animate__bounceIn animate__delay-1s"><a href="https://24h.pchome.com.tw/store/DAARFD" title="最高回饋26P幣"><img class="for_pc" src="images/pop.png" alt="最高回饋26P幣"><img class="for_m" src="images/pop_m.png" alt="最高回饋26P幣"></a></div>
+		<!-- //popsaleＡＤ end-->
 		<!-- 版頭視覺 -->
 		<section class="header" id="pagetop">
 			<div class="logo-24h for_pc"><a href="https://24h.pchome.com.tw/" target="_blank"><img class="w-100" src="images/logo-24h.png"></a></div>
 			<div class="header-container">
 				<div class="kv_titlebg"><img class="w-100" src="images/kv_titlebg.png"></div>
-				<div class="kv_title for_pc animate__animated animate__fadeInDown"><img class="w-100" src="images/kv_title.png"></div>
+				<div class="kv_title  animate__animated animate__fadeInDown"><img class="w-100" src="images/kv_title.png"></div>
 
 				<!--KV SLIDE-->
 				<!-- 品牌輪播Swiper -->
 				<div class="kvslide  animate__animated animate__fadeInRight">
-					<div thumbsSlider="" class="swiper mySwiper-kv">
+					<div thumbsSlider="" class="swiper mySwiper-kv" id="Swiper-kv">
 						<div class="swiper-wrapper ">
 							<div class="swiper-slide"><img class="w-100" src="images/kvslide-nav01.png">
 							</div>
@@ -85,12 +88,12 @@
 
 						</div>
 					</div>
-					<div class="swiper mySwiper-kv2">
+					<div class="swiper mySwiper-kv2" id="Swiper-kv2">
 						<div class="swiper-wrapper">
 							<div class="swiper-slide">
 								<a href="https://24h.pchome.com.tw/store/DABCBC" target="_blank">
-									<img class="w-100 for_pc" src="images/slide01.png"
-										alt="摩戴舒 平面醫用口罩 均單盒免百 滿額送3%P"><img class="w-100 for_m" src="images/slide01_m.png" alt="摩戴舒 平面醫用口罩 均單盒免百 滿額送3%P"></a>
+									<img class="w-100 for_pc" src="images/slide01_1026.png"
+										alt="摩戴舒 平面醫用口罩 均單盒免$3 滿額限送3%P"><img class="w-100 for_m" src="images/slide01_m_1026.png" alt="摩戴舒 平面醫用口罩 均單盒免百 滿額送3%P"></a>
 							</div>
 							<div class="swiper-slide">
 								<a href="https://24h.pchome.com.tw/store/DAARE4" target="_blank">
@@ -117,17 +120,19 @@
 				<!-- //品牌輪播Swiper end -->
 				<!--//KV SLIDE end-->
                 <!--活動區塊 -->
+				
 				<div class="box-hotsale bg-linear1  animate__animated animate__fadeInUp">
 					<div class="col-6 col-lg-3 hoversacle"><a href="https://24h.pchome.com.tw/store/DABCMC" target="_blank"><img
 								class="w-100" src="images/hotsale01.png" alt="百變口罩全館均片$1UP"></a></div>
 					<div class="col-6 col-lg-3 hoversacle"><a href="https://24h.pchome.com.tw/region/DAAR" target="_blank"><img
 								class="w-100" src="images/hotsale02.png" alt="滿$11下單登記抽$11111P"></a></div>
-					<div class="col-6 col-lg-3 hoversacle"><a href="https://24h.pchome.com.tw/region/DAAR" target="_blank"><img
+					<div class="col-6 col-lg-3 hoversacle"><a href="https://24h.pchome.com.tw/region/DAAH" target="_blank"><img
 								class="w-100" src="images/hotsale03.png" alt="醫療、銀髮累計滿11111登記送1111P(50名)"></a></div>
 					<div class="col-6 col-lg-3 hoversacle"><a href="https://24h.pchome.com.tw/store/?fq=/A/173872"
 							target="_blank"><img class="w-100" src="images/hotsale04.png" alt="醫療保健千種商品滿3000折300	"></a>
 					</div>
 				</div>
+			
 				 <!--//活動區塊 end -->
 				<div class="kv_phy animate__animated animate__fadeInUp">
 					<img class="w-100" src="images/KV_phy3.png">
@@ -148,7 +153,7 @@
 		</section>
 		<!-- //版頭視覺 end-->
 		<!--側欄menu-->
-		<div class="for_pc" style="position:fixed;right:0;z-index:30;top:32px;" id="sidePanelRight">
+		<div class="for_pc" style="position:fixed;right:0;z-index:30;top:110px;" id="sidePanelRight">
 			<div class="ui-sidepanel">
 				<!-- <span class="ui-btn b-arrow-u">PAGE TOP</span> -->
 				<div class="ui-btn">
@@ -199,7 +204,7 @@
 				</div>
 				<!-- 品牌輪播Swiper -->
 				<div class="brandslide">
-					<div thumbsSlider="" class="swiper mySwiper brandslide-nav">
+					<div thumbsSlider="" class="swiper mySwiper brandslide-nav" id="Swiper-bd">
 						<div class="swiper-wrapper ">
 							<div class="swiper-slide">新色出擊
 							</div>
@@ -214,18 +219,18 @@
 						</div>
 					</div>
 					<div style="--swiper-navigation-color: #000; --swiper-pagination-color: #fff"
-						class="swiper mySwiper2">
+						class="swiper mySwiper2" id="Swiper-bd2">
 						<div class="swiper-wrapper">
 							<div class="swiper-slide">
 								<!-- 5品區:第一區中衛口罩 -->
 								<div class="box-5p">
 									<ul>
 										<li><a href="https://24h.pchome.com.tw/store/DABC7Y" target="_blank">
-												<img src="images/titpic01.png" /></a></li>
-										<li><a href="https://24h.pchome.com.tw/prod/DABC7Y-A900FEE63" target="_blank">
-												<i class="ico_award01"><img src="images/item/brandA-1.jpg" /></i>
+												<img src="images/titpic01.jpg" alt="中衛口罩" /></a></li>
+										<li><a href="https://24h.pchome.com.tw/prod/DABC7Y-A900E01O3" target="_blank">
+												<i class="ico_award01"><img src="images/item/brandA-1_1026.jpg" /></i>
 												<span class="font">
-													<h4 class="ribbon">秋季限定款 呼吸不壓臉</h4>
+													<h4 class="ribbon">純白百搭 呼吸不壓臉</h4>
 													<p>中衛<br>Simply white3D口罩</p> <span
 														class="price"><strong>$350</strong></span>
 												</span></a></li>
@@ -258,8 +263,8 @@
 								<div class="box-5p">
 									<ul>
 										<li><a href="https://24h.pchome.com.tw/store/DAARAW" target="_blank">
-												<img src="images/titpic02.png" /></a></li>
-										<li><a href="https://24h.pchome.com.tw/prod/DABC9I-A900BBI92" target="_blank">
+												<img src="images/titpic02.jpg" alt="百靈耳溫槍" /></a></li>
+										<li><a href="https://24h.pchome.com.tw/store/DAARAX" target="_blank">
 												<i class="ico_award01"><img src="images/item/brandB-1.jpg" /></i>
 												<span class="font">
 													<h4 class="ribbon">輕鬆快測 準確不擾孩</h4>
@@ -269,7 +274,7 @@
 										<li><a href="https://24h.pchome.com.tw/prod/DEAIX8-A900AU50A" target="_blank">
 												<i class="ico_award01"><img src="images/item/brandB-2.jpg" /></i>
 												<span class="font">
-													<h4 class="ribbon">奶瓶、洗澡水也好測</h4>
+													<h4 class="ribbon">物品也準測 泡奶不燙孩</h4>
 													<p>百靈<br>免接觸額溫槍BNT400</p> <span
 														class="price"><s>$2780</s><strong>$2380</strong></span>
 												</span></a></li>
@@ -296,34 +301,34 @@
 								<div class="box-5p">
 									<ul>
 										<li><a href="https://24h.pchome.com.tw/store/DAARE0" target="_blank">
-												<img src="images/titpic03.png" /></a></li>
+												<img src="images/titpic03.jpg" alt="德國百靈油" /></a></li>
 										<li><a href="https://24h.pchome.com.tw/prod/DABC9B-A900BG6Z4" target="_blank">
 												<i class="ico_award01"><img src="images/item/brandC-1.jpg" /></i>
 												<span class="font">
 													<h4 class="ribbon">終結鼻塞 感冒超必備</h4>
 													<p>德國百靈油<br>入門隨身組</p> <span
-														class="price"><s>$1009</s><strong>$599</strong></span>
+														class="price"><s></s><strong>$599</strong></span>
 												</span></a></li>
 										<li><a href="https://24h.pchome.com.tw/prod/DABC9B-A900BTX76" target="_blank">
 												<i class="ico_award01"><img src="images/item/brandC-2.jpg" /></i>
 												<span class="font">
 													<h4 class="ribbon">全家好照護 送金盞花軟膏</h4>
 													<p>德國百靈油<br>居家保健組</p> <span
-														class="price"><s>$4407</s><strong>$2711</strong></span>
+														class="price"><s></s><strong>$2711</strong></span>
 												</span></a></li>
 										<li><a href="https://24h.pchome.com.tw/prod/DABC9B-A900AV4FW" target="_blank">
 												<i class="ico_award01"><img src="images/item/brandC-3.png" /></i>
 												<span class="font">
 													<h4 class="ribbon">一聞清新 緩解腸胃不適</h4>
 													<p>德國百靈油<br>緩解舒暢組</p> <span
-														class="price"><s>$1950</s><strong>$1111</strong></span>
+														class="price"><s></s><strong>$1111</strong></span>
 												</span></a></li>
 										<li><a href="https://24h.pchome.com.tw/prod/DABC9B-A900F8NK1" target="_blank">
 												<i class="ico_award01"><img src="images/item/brandC-4.jpg" /></i>
 												<span class="font">
 													<h4 class="ribbon">雙11限量 分裝帶著走</h4>
 													<p>德國百靈油<br>聞抹雙用組</p> <span
-														class="price"><s>$5730</s><strong>$3511</strong></span>
+														class="price"><s></s><strong>$3511</strong></span>
 												</span></a></li>
 									</ul>
 								</div>
@@ -334,7 +339,7 @@
 								<div class="box-5p">
 									<ul>
 										<li><a href="https://24h.pchome.com.tw/store/DAARBL" target="_blank">
-												<img src="images/titpic04.png" /></a></li>
+												<img src="images/titpic04.jpg" alt="博士倫" /></a></li>
 										<li><a href="https://24h.pchome.com.tw/prod/DABC9S-19006NB1P" target="_blank">
 												<i class="ico_award01"><img src="images/item/brandD-1.jpg" /></i>
 												<span class="font">
@@ -345,7 +350,7 @@
 										<li><a href="https://24h.pchome.com.tw/prod/DABC9S-1900FKJN1" target="_blank">
 												<i class="ico_award01"><img src="images/item/brandD-2.jpg" /></i>
 												<span class="font">
-													<h4 class="ribbon">下單現折 4hr擊退隱眼菌</h4>
+													<h4 class="ribbon">限買現折 4hr擊退隱眼菌</h4>
 													<p>瑞霖<br>淨潔保養液升級組</p> <span
 														class="price"><s>$1650</s><strong>$1111</strong></span>
 												</span></a></li>
@@ -359,8 +364,8 @@
 										<li><a href="https://24h.pchome.com.tw/prod/DAARBL-1900FMIS8" target="_blank">
 												<i class="ico_award01"><img src="images/item/brandD-4.jpg" /></i>
 												<span class="font">
-													<h4 class="ribbon">2000ML 再送旅行60ML</h4>
-													<p>瑞霖<br>淨潔保養液囤貨組</p> <span
+													<h4 class="ribbon">明亮看的清 送旅行60ML</h4>
+													<p>瑞霖<br>淨潔保養液2000ML</p> <span
 														class="price"><s>$1396</s><strong>$1111</strong></span>
 												</span></a></li>
 									</ul>
@@ -404,7 +409,7 @@
 							<div class="font">
 								<h4 class="ribbon">滿額送11%P回饋無上限</h4>
 								<p>美德<br>COOL迷彩口罩</p>
-								<span class="price"><s>$899</s><strong>$450</strong>/2盒</span>
+								<span class="price"><s>$899</s><strong>$111</strong></span>
 							</div>
 						</a>
 					</li>
@@ -419,7 +424,7 @@
 						</a>
 					</li>
 					<li class="itemlist">
-						<a href="https://24h.pchome.com.tw/store/?fq=/A/177239" target="_blank">
+						<a href="https://24h.pchome.com.tw/store/DABCK0" target="_blank">
 							<img src="images/item/A1-4.jpg">
 							<div class="font">
 								<h4 class="ribbon">超明聯名 滿額送111P</h4>
@@ -461,7 +466,7 @@
 						<a href="https://24h.pchome.com.tw/store/DAARAZ" target="_blank">
 							<img src="https://cs-b.ecimg.tw/items/DABCKHA900BG3KG/000001_1660874779.jpg">
 							<div class="font">
-								<h4 class="ribbon">適用嬰幼兒 小探頭不傷耳</h4>
+								<h4 class="ribbon">小探頭不傷耳 送40入耳套</h4>
 								<p>歐姆龍<br>紅外線耳溫槍</p>
 								<span class="price"><s>$2280</s><strong>$1780</strong></span>
 							</div>
@@ -498,8 +503,8 @@
 						</a>
 					</li>
 					<li class="itemlist order-3">
-						<a href="https://24h.pchome.com.tw/prod/DABC2G-A900DYDLM" target="_blank">
-							<img src="images/item/brandA-1.jpg">
+						<a href="https://24h.pchome.com.tw/store/DAARB6" target="_blank">
+							<img src="https://cs-b.ecimg.tw/items/DABC2GA900DYDLM/000001_1666317851.jpg">
 							<div class="font">
 								<h4 class="ribbon">安心非接觸 3色辨識體溫</h4>
 								<p>福達康<br>額溫槍E127</p>
@@ -513,7 +518,7 @@
 							<div class="font">
 								<h4 class="ribbon">大螢幕顯示 夜晚好清晰</h4>
 								<p>FORA<br>紅外線額溫槍</p>
-								<span class="price"><s>$2580</s><strong>$1500</strong></span>
+								<span class="price"><s>$2580</s><strong>$1411</strong></span>
 							</div>
 						</a>
 					</li>
@@ -530,7 +535,7 @@
 						<a href="https://24h.pchome.com.tw/store/DAARAQ" target="_blank">
 							<img src="images/item/A3-1.jpg">
 							<div class="font">
-								<h4 class="ribbon">4大關鍵指標</h4>
+								<h4 class="ribbon">玩色輕薄 小資好入門</h4>
 								<p>歐姆龍<br>體重體脂計HBF-225</p>
 								<span class="price"><s>$2680</s><strong>$1380</strong></span>
 							</div>
@@ -538,11 +543,11 @@
 					</li>
 					<li class="itemlist">
 						<a href="https://24h.pchome.com.tw/store/DAARAQ" target="_blank">
-							<img src="images/item/A3-2.jpg">
+							<img src="images/item/A3-2_1026.jpg">
 							<div class="font">
-								<h4 class="ribbon">多可測骨骼肌比率</h4>
-								<p>歐姆龍<br>體重體脂計HBF-375</p>
-								<span class="price"><s>$5280</s><strong>$3980</strong></span>
+								<h4 class="ribbon">準確速測量 直送耳溫槍</h4>
+								<p>歐姆龍<br>體重體脂計HBF-371</p>
+								<span class="price"><s>$4080</s><strong>$2999</strong></span>
 							</div>
 						</a>
 					</li>
@@ -558,9 +563,9 @@
 					</li>
 					<li class="itemlist">
 						<a href="https://24h.pchome.com.tw/store/DAARAQ" target="_blank">
-							<img src="images/item/A3-4.jpg">
+							<img src="images/item/A3-4_1026.jpg">
 							<div class="font">
-								<h4 class="ribbon">四點式+藍牙傳輸</h4>
+								<h4 class="ribbon">專業加倍 分析更精準</h4>
 								<p>歐姆龍<br>藍牙傳輸體脂計HBF-702T</p>
 								<span class="price"><s>$8880</s><strong>$5580</strong></span>
 							</div>
@@ -577,7 +582,7 @@
 						</a>
 					</li>
 					<li class="itemlist">
-						<a href="https://24h.pchome.com.tw/prod/DABCKH-A900F7DPQ2" target="_blank">
+						<a href="https://24h.pchome.com.tw/prod/DABCKH-A900F7DPQ?q=/S/DAARAQ" target="_blank">
 							<img src="images/item/A3-6.jpg">
 							<div class="font">
 								<h4 class="ribbon">可配對2台智慧裝置</h4>
@@ -603,25 +608,25 @@
 						</a>
 					</li>
 					<li class="bg-linear1">
-						<a href="https://24h.pchome.com.tw/store/DAARF0" target="_blank">
+						<a href="https://24h.pchome.com.tw/store/DAARF6" target="_blank">
 							<p><span>★疤痕掰掰★</span><strong>凝膠貼片</strong></p>
 							<i><img src="images/keyowrdB-03.png"></i>
 						</a>
 					</li>
 					<li class="bg-linear1">
-						<a href="https://24h.pchome.com.tw/store/DAARF0" target="_blank">
-							<p><span>★血糖尿酸★</span><strong>檢測配件</strong></p>
+						<a href="https://24h.pchome.com.tw/store/DAARF4" target="_blank">
+							<p><span>★肩頸酸酸★</span><strong>舒緩貼片</strong></p>
 							<i><img src="images/keyowrdB-04.png"></i>
 						</a>
 					</li>
 					<li class="bg-linear1">
-						<a href="https://24h.pchome.com.tw/store/DAARF0" target="_blank">
-							<p><span>★肩頸酸酸★</span><strong>舒緩貼片</strong></p>
+						<a href="https://24h.pchome.com.tw/store/DAARF5" target="_blank">
+							<p><span>★血糖尿酸★</span><strong>檢測配件</strong></p>
 							<i><img src="images/keyowrdB-05.png"></i>
 						</a>
 					</li>
 					<li class="bg-linear1">
-						<a href="https://24h.pchome.com.tw/store/DAARF0" target="_blank">
+						<a href="https://24h.pchome.com.tw/store/DAAH52" target="_blank">
 							<p><span>★健走樂活★</span><strong>拐杖手杖</strong></p>
 							<i><img src="images/keyowrdB-06.png"></i>
 						</a>
@@ -666,7 +671,7 @@
 							<div class="font">
 								<h4 class="ribbon">尺寸加大 下單抽11111P</h4>
 								<p>Comefree<br>乾溼兩用熱敷墊</p>
-								<span class="price"><s>$2180</s><strong>$1650</strong></span>
+								<span class="price"><s>$2180</s><strong>$1599</strong></span>
 							</div>
 						</a>
 					</li>
@@ -688,7 +693,7 @@
 				<ul class="box-oneplus6">
 					<li class="itemlist">
 						<a href="https://24h.pchome.com.tw/store/DAARC2" target="_blank">
-							<img src="https://cs-b.ecimg.tw/items/DABCAZA900ATPAA/000001_1664508094.jpg">
+							<img src="images/item/B2-1_1026.jpg">
 							<div class="font">
 								<h4 class="ribbon">服貼不剝落 親膚不過敏</h4>
 								<p>Power Max <br>涼感給力貼</p>
@@ -708,11 +713,11 @@
 					</li>
 					<li class="itemlist">
 						<a href="https://24h.pchome.com.tw/store/DAARC6" target="_blank">
-							<img src="images/item/B3-2.jpg">
+							<img src="images/item/B3-2_1026.jpg">
 							<div class="font">
-								<h4 class="ribbon">超薄不滑落 清潔不痛手</h4>
+								<h4 class="ribbon">超薄不滑落 清潔好穿脫</h4>
 								<p>醫博康<br>醫用多用途手套</p>
-								<span class="price"><s>$1299</s><strong>$649</strong></span>
+								<span class="price"><s>$1299</s><strong>$649</strong>/4盒</span>
 							</div>
 						</a>
 					</li>
@@ -748,7 +753,7 @@
 							<div class="font">
 								<h4 class="ribbon bg-5">小顆隱密高 滿額折1111</h4>
 								<p>Mimitakara<br>隱密耳內集音器</p>
-								<span class="price"><s>$1850</s><strong>$980</strong></span>
+								<span class="price"><s>$1850</s><strong>$799</strong></span>
 							</div>
 						</a>
 					</li>
@@ -932,38 +937,17 @@
 		});
 	</script> -->
 	<!--//捲軸往下時顯示-->
-	<!--swiper js-->
-	<!-- <script>
-		var swiper = new Swiper(".kvslide .mySwiper", {
-			navigation: {
-				nextEl: ".kvslide .swiper-next-button",
-				prevEl: ".kvslide .swiper-prev-button"
-			},
-
-			effect: "fade",
-			loop: "infinite",
-			autoplay: true,
-			pagination: {
-				el: ".swiper-pagination",
-				type: "fraction"
-			}
-		});
-
-		swiper.on('slideChange', function (sld) {
-			document.body.setAttribute('data-sld', sld.realIndex);
-		});
-	</script> -->
-	<!--//swiper js-->
+	
 	<!-- 版頭KVSwiper js-->
 	<script>
-		var swiper = new Swiper(".kvslide .mySwiper-kv", {
+		var swiper = new Swiper("#Swiper-kv", {
 			spaceBetween: 15,
 			slidesPerView: 4,
 			freeMode: true,
 			watchSlidesProgress: true,
 
 		});
-		var swiper2 = new Swiper(".kvslide .mySwiper-kv2", {
+		var swiper2 = new Swiper("#Swiper-kv2", {
 			effect: "flip",
 			spaceBetween: 15,
 			navigation: {
@@ -971,7 +955,10 @@
 				prevEl: ".kvslide .swiper-button-prev",
 			},
 			loop: "infinite",
-			autoplay: true,
+			autoplay: {
+          delay: 2500,
+          disableOnInteraction: false
+        },
 			thumbs: {
 				swiper: swiper,
 			},
@@ -980,14 +967,14 @@
 	<!-- //版頭KVSwiper js-->
 	<!-- 品牌輪播Swiper js-->
 	<script>
-		var swiper = new Swiper(".brandslide .mySwiper", {
+		var myswiper = new Swiper("#Swiper-bd", {
 			spaceBetween: 15,
 			slidesPerView: 4,
 			freeMode: true,
 			watchSlidesProgress: true,
 
 		});
-		var swiper2 = new Swiper(".brandslide .mySwiper2", {
+		var myswiper2 = new Swiper("#Swiper-bd2", {
 			
 			spaceBetween: 15,
 			navigation: {
@@ -996,13 +983,17 @@
 			},
 			
 			loop: "infinite",
-			autoplay: true,
+			autoplay: {
+          delay: 3000,
+          disableOnInteraction: false
+        },
 			thumbs: {
-				swiper: swiper,
+				swiper: myswiper,
 			},
 		});
 	</script>
 	<!-- //品牌輪播Swiper js-->
+	
 </body>
 
 </html>
