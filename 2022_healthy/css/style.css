@@ -526,7 +526,7 @@ a.my-btn-goTop.show {
     font-size:1.1rem;
     line-height: 2.4rem;
 }
-
+}
 @keyframes hscroll {
   0% {
     transform: translateX(0);
