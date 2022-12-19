@@ -202,7 +202,7 @@ h4 {
 
 @media screen and (max-width: 991px) {
   .price {
-    font-size: .9rem;margin: 6px auto 0;
+    font-size: 1rem;margin: 6px auto 0;
   }
 
   .price s {
@@ -210,17 +210,17 @@ h4 {
   }
 
   .price strong {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
   }
-
-  /* .price:after {
-    padding: 4px 6px 4px 14px;
-    font-size: 0.6rem;
-    font-weight: 700;
-    line-height: 67px;
-  } */
 }
-
+  @media screen and (max-width: 767px) {
+    .price s {
+      margin-right:auto;
+      margin-left: auto;
+      display: block;
+      margin-bottom: 4px;
+}
+  }
 /* 內文 */
 .font {
   color: var(--PV-font);
@@ -1016,7 +1016,6 @@ section.bg-moveup::before {
     line-height: 2rem;
   letter-spacing: -1px;}
   .keywordB li span {
-    font-size:.9rem;
     letter-spacing:0;
   }
 }
@@ -1024,7 +1023,6 @@ section.bg-moveup::before {
   .keywordB li p {
     width: 90%;}
     .keywordB li span {
-      font-size:1rem;
       letter-spacing:0;
     }
 }
@@ -1036,7 +1034,9 @@ section.bg-moveup::before {
     font-size: 1.2rem;
   }
   .keywordB li span {
-    font-size:.7rem;
+    font-size: 1rem;
+    width: 80%;
+    line-height: 1.2rem;
   }
 
 
@@ -1930,13 +1930,14 @@ ul.box-oneplus6 .itemlist .font p {
   width: 100%;
   box-shadow: 1px 1px 4px #44444459;
   background: url(../img/cardbg3.gif) repeat;
+  padding: .25rem;
 }
 
 .BNcard_img {
   flex-shrink: 0;
     height: 90px;width: 90px;
     justify-content: center;
-    margin: 0 8px;
+    margin: 0 .5rem 0;
     background: #fff;
     border-radius: 50%;
 }
@@ -1952,7 +1953,7 @@ ul.box-oneplus6 .itemlist .font p {
   display: flex;
   flex-wrap: wrap;
   justify-content: normal;
-  padding: 12px 6px 12px 0px;
+  padding:0px;
   width: calc(100% - 48px);
   font-size:1rem;line-height: 1.5rem;
 }
@@ -1981,7 +1982,7 @@ ul.box-oneplus6 .itemlist .font p {
 }
 @media screen and (max-width: 1199px) {
   .BNcard_img {height: 70px;width: 70px;}
-  .BNcard_info {width:100%;padding: 12px 3px 12px 0px;font-size:.9rem;line-height: 1.2rem;}
+  .BNcard_info {width:100%;padding: 12px 3px 12px 0px;font-size:1rem;line-height: 1.5rem;}
 
 }
 @media screen and (max-width:797px) {
@@ -1991,11 +1992,11 @@ ul.box-oneplus6 .itemlist .font p {
     margin:0;
 }
   .BNcard_info {
-    padding: 3px 3px 6px 4px;    font-size:.8rem; line-height: 1rem;}
+    padding: 3px 3px 6px 4px;    font-size:1rem; line-height: 1.3rem;}
 
     .BNcard_giveBack strong{
-      font-size:1rem; 
-    line-height: 1.2rem;}
+      font-size:1.2rem; 
+    line-height: 1.3rem;}
 }
 
 
