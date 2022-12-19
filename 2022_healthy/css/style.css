@@ -582,7 +582,7 @@ width:27%;
   z-index:51;  
   background-color: var(--PV-color);
   height: auto;
-  width: 100vw;
+  width: 100%;
   border-bottom: 2px solid #fff;}
 .sticky {
     position: fixed;
