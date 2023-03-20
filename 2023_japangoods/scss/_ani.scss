@@ -1,0 +1,80 @@
+$base: #263238;
+$lite:  #fff;
+$brand: #f7ff33;
+$size: 65px;
+
+
+$borderColor: rgba($color: #fff, $alpha: .7);
+.loading_mask {
+    transition: .35s all;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0px;
+    left: 0;
+    z-index: 99999;
+    display: flex;
+    background: #fe4b3d;
+
+    .loader-12 {
+        width : $size;
+        height: $size;
+        border: 5px dotted $lite;
+        border-style: solid solid dotted dotted;
+        border-radius: 50%;
+        display: inline-block;
+        position: relative;
+        animation: rotation 1.6s linear infinite;
+        &:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            border: 5px dotted $brand;
+            border-style: solid solid dotted;
+            width:  $size/2;
+            height:  $size/2;
+            border-radius: 50%;
+            animation: rotationBack .8s linear infinite;
+            transform-origin: center center;
+        }
+    }
+    &.fadeOut {
+        opacity: 0;
+        pointer-events: none;
+    }
+}
+@keyframes rotation {
+    0% { transform: rotate(0deg) }
+    100% { transform: rotate(360deg) }
+}
+@keyframes rotationBack {
+    0% { transform: rotate(0deg) }
+    100% { transform: rotate(-360deg) }
+}
+
+
+
+// 漂浮
+@keyframes fly-01 {
+    0%,100% { transform: translate(0, 0); }
+    50% { transform: translate(-0.2%, -2.5%); }
+}
+
+@keyframes fly-02 {
+    0%,100% { transform: translate(0, 0); }
+    50% { transform: translate(0.2%, -3.5%); }
+}
+@media only screen and (max-width: 767px) {
+    @keyframes fly-01 {
+        0%,100%{ transform: translate(0, 0); }
+        50% { transform: translate(-0.5%, -5%); }
+    }
+    @keyframes fly-02 {
+        0%,100% { transform: translate(0, 0); }
+        50% { transform: translate(-1%, -5%); }
+    }
+}
