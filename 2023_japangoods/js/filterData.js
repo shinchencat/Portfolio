@@ -185,21 +185,60 @@ function insertPD(blockNumFirst1, blockNumLast1, targetDom){
 //插入強打輪播 DOM
 function insertMainSlider(blockNumFirst1, blockNumLast1, targetDom){
     let html = '';
-	let thumbsHtml ='';
     let newArr = [];
 	dataNode(newArr, blockNumFirst1, blockNumLast1);
-	newArr.forEach(function (item, index) {
-		html += `<li class="swiper-slide">
-				<a href="`+ item.Link.Url +`">
-				<div class="imgBx"><img src="`+ item.Img.Src +`"></div>
-				<div class="imgBx-subtit">`+ item.Link.Text2 +`</div>
-				<div class="info">
-					<h3>`+ item.Link.Text +`</h3>
-					<span class="price">$<strong>`+item.Link.Text1 +`</strong></span>
-				</div></a>
-			</li>`
-	})
+	(newArr.length > 0) && (inHtml());
+	function inHtml() {
+		newArr.forEach(function (item, index) {
+			html += `<li class="swiper-slide">
+					<a href="`+ item.Link.Url +`">
+					<div class="imgBx"><img src="`+ item.Img.Src +`"></div>
+					<div class="imgBx-subtit">`+ item.Link.Text2 +`</div>
+					<div class="info">
+						<h3>`+ item.Link.Text +`</h3>
+						<span class="price">$<strong>`+item.Link.Text1 +`</strong></span>
+					</div></a>
+				</li>`
+		});
+	}
     document.querySelector(targetDom).innerHTML = html;
+
+	// 確認載入輪播圖，才會啟動輪播功能，避免版頭壞掉or卡住 
+	// 請注意輪播的 class ID是否相符(#manSlider)
+	const images = document.querySelectorAll(targetDom+' img');
+	console.log(images);
+	(images.length > 0) && (intro());
+	function intro() {
+		setTimeout(() => {
+			var mainSwiperWeb = new Swiper('#mainSlider .swiper-container', {
+				slidesPerView: 5,
+				spaceBetween: 0,
+				centeredSlides: true,
+				loop: true,
+				mousewheel: false,
+				observer: true, //修改swiper自己或子元素的時候，自動初始化swiper
+				observeParents: true, //修改swiper的父元素時，自動初始化swiper
+				speed: 800,
+				
+				on: {
+					transitionEnd: function(){
+							this.params.mousewheel.releaseOnEdges = this.isEnd;
+					}
+				},
+				autoplay: {
+					delay: 12800,
+					disableOnInteraction: false,
+				},
+				pagination: {
+					el: '#mainSlider .swiper-pagination',
+				},
+				navigation: {
+					nextEl: '#mainSlider .swiper-button-next',
+					prevEl: '#mainSlider .swiper-button-prev',
+				},
+			});
+		}, 1000);
+	}
 }
 
 
@@ -218,7 +257,7 @@ window.onload = function() {
 	// banner
 	insertbodyBN(42,51, '#pd_bn');
 	// 商品
-	insertPD(30,39, '#pd_brand');
+	insertPD(53,62, '#pd_brand');
 	insertPD(64,73, '#pd_01');
 	insertPD(220,229, '#pd_02');
     insertPD(231,240, '#pd_03');

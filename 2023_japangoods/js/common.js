@@ -61,44 +61,9 @@ function appMenu() {
 
 //各種輪播
 function allSlider() {
-	// 版頭輪撥 web
-	document.querySelectorAll('#mainSlider li');
-	const webSlideLength = document.querySelectorAll('#mainSlider li').length;
-	// 有內容時才執行輪播
-	( webSlideLength > 0 ) ? (mainSlide()) : (document.querySelector('#mainSlider').classList.add('hide'));
-	// console.log(webSlideLength);
-
-	function mainSlide() {
-		var mainSwiperWeb = new Swiper('#mainSlider .swiper-container', {
-			slidesPerView: 5,
-  spaceBetween: 0,
-  centeredSlides: true,
-			loop: true,
-			mousewheel: false,
-			observer: true, //修改swiper自己或子元素的時候，自動初始化swiper
-			observeParents: true, //修改swiper的父元素時，自動初始化swiper
-			speed: 800,
-			
-			on: {
-				transitionEnd: function(){
-						this.params.mousewheel.releaseOnEdges = this.isEnd;
-				}
-			},
-			autoplay: {
-				delay: 112800,
-				disableOnInteraction: false,
-			},
-			pagination: {
-				el: '#mainSlider .swiper-pagination',
-			},
-			navigation: {
-				nextEl: '#mainSlider .swiper-button-next',
-				prevEl: '#mainSlider .swiper-button-prev',
-			},
-		});
-	}
-
-	// 第二個輪播，如有新增輪播，請加在此區往下加
+	document.querySelector('.loading_mask').classList.add('fadeOut');
+	// 版頭輪撥 在filterData調整
+	// 第二個以上的輪播，如有新增輪播，請加在此區往下加
 	var swiper2 = new Swiper('#swiper-new2 .swiper-container', {
 		loop: true,
 		mousewheel: false,
@@ -121,10 +86,6 @@ function allSlider() {
 
 }
 
-setTimeout(() => {
-	document.querySelector('.loading_mask').classList.add('fadeOut');
-}, 1000);
-
 document.addEventListener('DOMContentLoaded', function(event) { 
 	// web側選單控制
 	webMenu();
@@ -138,35 +99,42 @@ document.addEventListener('DOMContentLoaded', function(event) {
 		// 各種輪播
 		allSlider();
 		
-	}, 500);
-
-	// hashtag Smooth scrolling
-	// 搭配css (scroll-padding-top)
-	document.querySelectorAll('.scrollto[href^="#"]').forEach(anchor => {
-		anchor.addEventListener('click', function (e) {
-			e.preventDefault();
-			document.querySelector(this.getAttribute('href')).scrollIntoView({
-				behavior: 'smooth',
-				block: "start",
+		// hashtag Smooth scrolling
+		// 搭配css (scroll-padding-top)
+		document.querySelectorAll('.scrollto[href^="#"]').forEach(anchor => {
+			anchor.addEventListener('click', function (e) {
+				e.preventDefault();
+				document.querySelector(this.getAttribute('href')).scrollIntoView({
+					behavior: 'smooth',
+					block: "start",
+				});
 			});
 		});
-	});
 
-	// 如果a連結的href為#就移除target
-	let getLink_b = document.querySelectorAll('a[href^="#"]'); 
-	getLink_b.forEach(function (item) {
-		item.removeAttribute('target');
-	});
-
-	// 如果a連結的href為空值(#no)就移除href
-	let getLink_a = document.querySelectorAll('a'); 
-	getLink_a.forEach(function (item) {
-		if (item.getAttribute('href') == '#no') {
-			// console.log('移除href');
+		// 如果a連結的href為#就移除target
+		let getLink_b = document.querySelectorAll('a[href^="#"]'); 
+		getLink_b.forEach(function (item) {
 			item.removeAttribute('target');
-			item.removeAttribute('href')
-		}
-	});
+		});
 
-
+		// 如果a連結的href為空值(#no)就移除href
+		let getLink_a = document.querySelectorAll('a'); 
+		getLink_a.forEach(function (item) {
+			if (item.getAttribute('href') == '#no') {
+				// console.log('移除href');
+				item.removeAttribute('target');
+				item.removeAttribute('href')
+			}
+		});
+	}, 800);
+	
+	// 網址有hashtag錨點
+	let hashTag = location.hash;
+	if (hashTag != '') {
+		console.log(hashTag);
+		setTimeout(() => {
+			const myElement = document.querySelector(hashTag);
+			myElement.scrollIntoView();
+		}, 1300);
+	} 
 });
