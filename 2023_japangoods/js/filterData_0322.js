@@ -226,7 +226,7 @@ function insertMainSlider(blockNumFirst1, blockNumLast1, targetDom){
 					}
 				},
 				autoplay: {
-					delay:1112800,
+					delay:2000,
 					disableOnInteraction: false,
 				},
 				pagination: {
