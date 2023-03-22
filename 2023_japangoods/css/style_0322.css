@@ -2276,6 +2276,7 @@ right: 100px;
 .swiper-slide a:hover{ filter:contrast(1.2); -webkit-filter:contrast(1.2); }
 
 .swiper-slide .imgBx {
+  position: relative;
   width:280px;
   height: auto;
   margin: 0 auto;

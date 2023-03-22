@@ -220,24 +220,24 @@ function insertMainSlider(blockNumFirst1, blockNumLast1, targetDom){
 				observeParents: true, //修改swiper的父元素時，自動初始化swiper
 				speed: 800,
 				
-				on: {
-					transitionEnd: function(){
-							this.params.mousewheel.releaseOnEdges = this.isEnd;
-					}
-				},
+				// on: {
+				// 	transitionEnd: function(){
+				// 			this.params.mousewheel.releaseOnEdges = this.isEnd;
+				// 	}
+				// },
 				autoplay: {
 					delay:2000,
 					disableOnInteraction: false,
 				},
-				pagination: {
-					el: '#mainSlider .swiper-pagination',
-				},
-				navigation: {
-					nextEl: '#mainSlider .swiper-button-next',
-					prevEl: '#mainSlider .swiper-button-prev',
-				},
+				// pagination: {
+				// 	el: '#mainSlider .swiper-pagination',
+				// },
+				// navigation: {
+				// 	nextEl: '#mainSlider .swiper-button-next',
+				// 	prevEl: '#mainSlider .swiper-button-prev',
+				// },
 			});
-		}, 1000);
+		}, 500);
 	}
 }
 
