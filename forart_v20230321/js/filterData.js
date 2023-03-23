@@ -269,5 +269,5 @@ window.onload = function() {
 	insertPD(99,108, '#pd_06');
 	insertPD(99,108, '#pd_06');
 	// banner
-	insertbodyBN(110,119, '#pd_02');
+	insertbodyBN(110,119, '#pd_bn');
 };
