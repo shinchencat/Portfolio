@@ -225,7 +225,7 @@ function insertMainSlider(blockNumFirst1, blockNumLast1, targetDom){
 				},
 				breakpoints: {
 					320: {
-						slidesPerView: 1.7,
+						slidesPerView: 1.8,
 					},
 				
 					768: {

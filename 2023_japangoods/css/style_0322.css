@@ -2083,14 +2083,13 @@ position: relative;
 }
 @media screen and (max-width:767px) {
   .mainSlider {
-    width: 680px;
-    height: 350px;
+    width:100vw;
+    height:80vw;
   }
   .mainSlider::before {
-    width: 680px;
-    height: 350px;
+    width:150vw;
+    height:80vw;
   }
-  .swiper-wrapper{  width: 680px!important;}
 }
 
 
@@ -2174,13 +2173,13 @@ position: relative;
 }
 @media screen and (max-width:767px) {
 .img__bgview {
-  height: 346px;
-  background-size: 680px;
+  height: 70vw;
+    background-size: 150vw;
 
 }
 .img__bghana {
-height: 346px;
-background-size:680px;
+  height: 70vw;
+  background-size: 150vw;
 
 }}
 #mainSlider{padding: 0;}
