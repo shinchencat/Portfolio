@@ -2018,49 +2018,6 @@ text-align: center;
     transform: scaleX(1.2);
   }
 }
-/*----- 版頭輪播ＫＶSwiper -----*/
-/* .kvslide {
-  position: relative;
-  width: 100%;
-  height: 533px;
-  margin: 0 auto;
-}
-
-@media screen and (max-width:1600px) and (min-width:1366px) {
-  .kvslide {
-    height: 401px;
-  }
-}
-
-@media screen and (max-width:1365px) and (min-width:1200px) {
-  .kvslide {
-    height: 352px;
-  }
-}
-
-@media screen and (max-width:1199px) {
-  .kvslide {
-    width: 960px;
-    height: 490px;
-    overflow: hidden;
-  }
-}
-
-@media screen and (max-width:991px) {
-  .kvslide {
-    width: 100%;
-    height: 490px;
-  }
-}
-
-@media screen and (max-width:767px) {
-  .kvslide {
-    width: 100%;
-    height: 350px;
-  }
-} */
-
-
 
 .mainSlider {
   width: 1755px;
@@ -2092,49 +2049,45 @@ position: relative;
 }
 
 @media screen and (max-width:1600px) and (min-width:1366px) {
-  .mainSlider::before {
+  .mainSlider {
     width: 1320px;
     height: 401px;
   }
-
-  .mainSlider {
+  .mainSlider::before {
     width: 1320px;
     height: 401px;
   }
 }
 
 @media screen and (max-width:1365px)and (min-width:1200px) {
-  .mainSlider::before {
+  .mainSlider {
     width: 1160px;
     height: 352px;
   }
-
-  .mainSlider {
+  .mainSlider::before {
     width: 1160px;
     height: 352px;
   }
 }
 
 @media screen and (max-width:1199px) {
-  .mainSlider::before {
-    width: 1615px;
-    height: 490px;
-  }
-
   .mainSlider {
-    width: 1615px;
-    height: 490px;
+    width: 1100px;
+    height: 566px;
+  }
+  .mainSlider::before {
+    width: 1100px;
+    height: 566px;
+    background-image: url(../img/kv/door-m.png);
   }
 }
 @media screen and (max-width:767px) {
-  .mainSlider::before {
-    display: none;
-    width: 1153px;
+  .mainSlider {
+    width: 680px;
     height: 350px;
   }
-
-  .mainSlider {
-    width: 1153px;
+  .mainSlider::before {
+    width: 680px;
     height: 350px;
   }
 }
@@ -2193,28 +2146,41 @@ position: relative;
     background-size: 1370px;
   }
 }
+@media screen and (max-width:1199px) {
+  .img__bgview {
+    background-image: url(../img/kv/bg_view-m.jpg);
+    height: 560px;
+    background-size: 1100px;
+    left: 0;
+    transition: none;
+    -webkit-transition: none;
+    -moz-transition: none;
+    -ms-transition: none;
+    -o-transition: none;
+  }
+  .img__bghana {
+    height: 560px;
+    background-size: 1100px;
+    left: 0;
+    background-image: url(../img/kv/bg_view2-m.png);
+    height: 560px;
+  transition: none;
+    -webkit-transition: none;
+    -moz-transition: none;
+    -ms-transition: none;
+    -o-transition: none;
+  }
+}
 @media screen and (max-width:767px) {
 .img__bgview {
-  display: none;
-  height: 345px;
-  background-size: 1150px;
-  left: 120px;
-  transition: none;
-  -webkit-transition: none;
-  -moz-transition: none;
-  -ms-transition: none;
-  -o-transition: none;
+  height: 346px;
+  background-size: 680px;
+
 }
 .img__bghana {
-  display: none;
-height: 345px;
-background-size: 1150px;
-right: 100px;
-transition: none;
-  -webkit-transition: none;
-  -moz-transition: none;
-  -ms-transition: none;
-  -o-transition: none;
+height: 346px;
+background-size:680px;
+
 }}
 #mainSlider{padding: 0;}
 .swiper-container {
@@ -2328,11 +2294,6 @@ transition: none;
   animation: grid_off1 1.5s ease-in-out forwards;
   -webkit-animation: grid_off1 1.5s ease-in-out forwards;
   transform-box: fill-box;
-  transform: translate3d(0,0,0) translateZ(0px);
-  -webkit-transform:;
-  -moz-transform:;
-  -ms-transform:;
-  -o-transform:;
 }
 
 .swiper-slide .imgBx-subtit {

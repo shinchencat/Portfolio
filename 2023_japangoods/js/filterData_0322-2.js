@@ -212,29 +212,26 @@ function insertMainSlider(blockNumFirst1, blockNumLast1, targetDom){
 		setTimeout(() => {
 			var mainSwiperWeb = new Swiper('#mainSlider .swiper-container', {
 				slidesPerView: 5,
+				spaceBetween: 0,
 				centeredSlides: true,
 				loop: true,
 				mousewheel: false,
 				observer: true, //修改swiper自己或子元素的時候，自動初始化swiper
 				observeParents: true, //修改swiper的父元素時，自動初始化swiper
 				speed: 800,
-				// autoplay: {
-				// 	delay: 2000,
-				// 	disableOnInteraction: false,
-				// },
+				  autoplay: {
+			     delay: 2000,
+				disableOnInteraction: false,
+				},
 				breakpoints: {
 					320: {
 						slidesPerView: 1.7,
-						spaceBetween: 0,
 					},
-					// 390: {
-					// 	slidesPerView: 1.5,
-					// 	// spaceBetween: 10,
-					// },
+				
 					768: {
 						slidesPerView: 3,
 					},
-					1200: {
+					1199: {
 						slidesPerView: 5,
 					},
 
