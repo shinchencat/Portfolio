@@ -1035,9 +1035,8 @@ a.my-btn-goTop.show {
   -webkit-transform-origin: top center;
   transform-origin: top center;
   transform-box: fill-box;
-  -webkit-animation: ;
-  -moz-animation: swing 2s infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955);
   animation: swing 2s infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  -webkit-animation: swing 2s infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955); -moz-animation: swing 2s infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
 
 .lanten img {
@@ -1182,6 +1181,21 @@ a.my-btn-goTop.show {
         left: 184px;
         top: 67px;
     }
+}
+@media screen and (max-width:480px) {
+.lanten {
+  animation:none;
+  -webkit-animation:none;
+}
+.kv-lanten-left {
+  animation: none;
+  -webkit-animation: none;
+}
+
+.kv-lanten-right {
+  animation: none;
+  -webkit-animation:none;
+}
 }
 @keyframes swing {
   0% {
@@ -1914,7 +1928,17 @@ text-align: center;
     .damo2 img { width: 50px; animation: jumping2 1s 0.1s linear infinite; -webkit-animation: jumping2 1s 0.1s linear infinite;
 }
 }
-
+@media screen and (max-width:480px) {
+  .damo1 img {
+    animation: none;
+    -webkit-animation: none;
+}
+  
+  .damo2 img {
+    animation: none;
+    -webkit-animation: none;
+  }
+}
 @keyframes jumping2 {
   0% {
     transform: translateY(0px);
