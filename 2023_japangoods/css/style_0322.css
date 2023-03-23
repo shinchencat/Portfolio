@@ -2090,6 +2090,7 @@ position: relative;
     width: 680px;
     height: 350px;
   }
+  .swiper-wrapper{  width: 680px!important;}
 }
 
 
