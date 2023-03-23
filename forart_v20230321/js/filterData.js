@@ -61,12 +61,12 @@ function insertMenu(webTargetDom, appTargetDom, goMainIcon) {
 	function inHtml() {
 		// 主會場小圖
 		webHtmlImg = ` 
-					<li class="banner head">
-						<a href="`+ newArrAll[0].Link.Url +`">
-							<img src="`+ newArrAll[0].Img.Src +`" class="d-block">
-						</a>
-					</li>
-					<li class="subtitle"><dt>特色分會場</dt></li>`
+			<li class="banner head">
+				<a href="`+ newArrAll[0].Link.Url +`">
+					<img src="`+ newArrAll[0].Img.Src +`" class="d-block">
+				</a>
+			</li>
+			<li class="subtitle"><dt>特色分會場</dt></li>`
 	
 		// 分會場
 		for (let i = 2; i < newArrAll.length; i++) {
@@ -117,7 +117,7 @@ function insertSmallBn(blockNumFirst1, blockNumLast1, targetDom){
 						</a>
 					</li> `
 		});
-		document.querySelector(targetDom).innerHTML = html;
+		(document.querySelector(targetDom) != null) && (document.querySelector(targetDom).innerHTML = html);
 	}
 
 	// 輪播控制, 2卡以上autoplay
@@ -151,36 +151,41 @@ function insertPD(blockNumFirst1, blockNumLast1, targetDom){
 			(item.Link.Text3 == "") ? 
 				LinkText3 = "" : LinkText3 = '$'+item.Link.Text3;
 				html += `
-					<li>
+					<li class="col-6 col-lg-3">
 						<a href="`+ item.Link.Url +`" target="_blank">
-							<i><img src="`+ item.Img.Src +`" /></i>
-							<h4 class="ribbon bg-5">`+ item.Link.Text2 +`</h4>
-							<p>`+ item.Link.Text +`</p>
-							<span class="price"><s>`+ LinkText3 +`</s>$<strong>`+item.Link.Text1 +`</strong></span>
+							<div class="icon d-flex align-items-end">
+								<img src="img/search.svg" class="d-block">
+							</div>
+							<div class="pic"><img src="`+ item.Img.Src +`" class="d-block"></div>
+							<div class="hotline">`+ item.Link.Text2 +`</div>
+							<div class="pd_title">`+ item.Link.Text +`</div>
+							<div class="price">
+								<i>`+ LinkText3 +`</i> <small>$</small>`+item.Link.Text1 +`
+							</div>
 						</a>
 					</li> `
-					
 		});
 	}
-    document.querySelector(targetDom).innerHTML = html;
+	(document.querySelector(targetDom) != null) && (document.querySelector(targetDom).innerHTML = html);
 }
 
 // 插入版身banner DOM (圖+連結)
- function insertbodyBN(blockNumFirst1, blockNumLast1, targetDom){
-     let html = '';
-     let newArr = [];
- 	dataNode(newArr, blockNumFirst1, blockNumLast1);
- 	// console.log(newArr.length);
- 	(newArr.length > 0) && (inHtml());
- 	function inHtml() {
- 		newArr.forEach(function (item) {
- 			html += `
- 			<div class="col-6 col-md-3 hoversacle p-1 p-xl-2"><a href="`+ item.Link.Url +`" target="_blank"><img
- 								class="w-100" src="`+ item.Img.Src +`"></a></div>`
- 		});
- 	}
-     document.querySelector(targetDom).innerHTML = html;
- }
+function insertbodyBN(blockNumFirst1, blockNumLast1, targetDom){
+    let html = '';
+    let newArr = [];
+	dataNode(newArr, blockNumFirst1, blockNumLast1);
+	// console.log(newArr.length);
+	(newArr.length > 0) && (inHtml());
+	function inHtml() {
+		newArr.forEach(function (item) {
+			html += `
+				<li class="col-lg-4 col-6 mb-3">
+					<a href="`+ item.Link.Url +`"><img src="`+ item.Img.Src +`" class="d-block"></a>
+				</li>`
+		});
+	}
+	(document.querySelector(targetDom) != null) && (document.querySelector(targetDom).innerHTML = html);
+}
 
 //插入強打輪播 DOM
 function insertMainSlider(blockNumFirst1, blockNumLast1, targetDom){
@@ -190,25 +195,24 @@ function insertMainSlider(blockNumFirst1, blockNumLast1, targetDom){
 	(newArr.length > 0) && (inHtml());
 	function inHtml() {
 		newArr.forEach(function (item, index) {
-			html += `<li class="swiper-slide">
-					<a href="`+ item.Link.Url +`">
-					<div class="imgBx"><img src="`+ item.Img.Src +`"></div>
-					<div class="imgBx-subtit">`+ item.Link.Text2 +`</div>
-					<div class="info">
-						<h3>`+ item.Link.Text +`</h3>
-						<span class="price">$<strong>`+item.Link.Text1 +`</strong></span>
-					</div></a>
-				</li>`
+			html += `
+					<li class="swiper-slide">
+						<a href="`+ item.Link.Url +`" target="_blank">
+							<div class="pic"><img src="`+ item.Img.Src +`" class="d-block"></div>
+							
+						</a>
+					</li> `
 		});
 	}
-    document.querySelector(targetDom).innerHTML = html;
+	(document.querySelector(targetDom) != null) && (document.querySelector(targetDom).innerHTML = html);
 
 	// 確認載入輪播圖，才會啟動輪播功能，避免版頭壞掉or卡住 
 	// 請注意輪播的 class ID是否相符(#manSlider)
 	const images = document.querySelectorAll(targetDom+' img');
-	console.log(images);
+	// console.log(images);
 	(images.length > 0) && (intro());
 	function intro() {
+		
 		setTimeout(() => {
 			var mainSwiperWeb = new Swiper('#mainSlider .swiper-container', {
 				slidesPerView: 5,
@@ -242,27 +246,28 @@ function insertMainSlider(blockNumFirst1, blockNumLast1, targetDom){
 }
 
 
+
 window.onload = function() {
 	// 接資料
 	toDataArr(IndexBlock);
 	// 主分會場選單
 	insertMenu('.left_menu .menu_box', '#appSubList', '#appMainIcon')
 	// 右側選單小貼紙
-	//  insertSmallBn(29,52, '#smallBn>ul')
+	insertSmallBn(31,40, '#smallBn>ul')
 
 	// 強打輪播
-	 insertMainSlider(30,39, '#mainSlider ul');
+	insertMainSlider(30,39, '#mainSlider ul');
 	// 第二個輪播
-	 // insertMainSlider(42,51, '#swiper-new2 ul');
-	// banner
-	insertbodyBN(42,51, '#pd_bn');
+	//insertMainSlider(42,51, '#swiper-new2 ul');
+
 	// 商品
-	insertPD(53,62, '#pd_brand');
 	insertPD(64,73, '#pd_01');
 	insertPD(220,229, '#pd_02');
-    insertPD(231,240, '#pd_03');
+	insertPD(231,240, '#pd_03');
 	insertPD(242,251, '#pd_04');
 	insertPD(87,96, '#pd_05');
-    insertPD(99,108, '#pd_06');
-	insertPD(110,119, '#pd_07');
+	insertPD(99,108, '#pd_06');
+	insertPD(99,108, '#pd_06');
+	// banner
+	insertbodyBN(110,119, '#pd_02');
 };
