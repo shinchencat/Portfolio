@@ -126,7 +126,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
 				item.removeAttribute('href')
 			}
 		});
-	}, 800);
+	}, 1500);
 	
 	// 網址有hashtag錨點
 	let hashTag = location.hash;
