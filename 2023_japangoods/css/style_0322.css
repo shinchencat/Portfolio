@@ -3935,7 +3935,7 @@ ul.box-itemlist2 li span {
 .loader-12 .ld img {
   width: 100%;
 }
-@media screen and (max-width:767px) {
+/* @media screen and (max-width:767px) {
   .loader-12 .ld:nth-child(1) {
     animation:none;
     -webkit-animation:none;
@@ -3950,7 +3950,7 @@ ul.box-itemlist2 li span {
     animation:none;
     -webkit-animation:none;
   }
-}
+} */
 @keyframes loadingC {
   0 {
     transform: translate(0, 0);
