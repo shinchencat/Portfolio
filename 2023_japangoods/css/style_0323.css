@@ -981,7 +981,7 @@ a.my-btn-goTop.show {
 @media screen and (max-width:767px) {
   .kv_title {
     height: 50vw;
-    background: url(../img/kv/curtain-m.png) bottom center repeat-x;
+    background: url(../img/kv/curtain-m0323.png) bottom center repeat-x;
     background-size: 100vw 60vw;
   }
 
@@ -1915,7 +1915,7 @@ text-align: center;
     right: 0;
     left: calc(50% - 100px);
     transform: translateX(-50%);
-    top: 12px;    width: 50px;
+    top: 10px;    width: 50px;
     height: 50px;
   }
   .damo1::before {
@@ -1930,6 +1930,7 @@ text-align: center;
 }
 @media screen and (max-width:480px) {
   .damo1 img {
+    top: 10px;
     animation: none;
     -webkit-animation: none;
 }
@@ -2212,6 +2213,7 @@ position: relative;
 #mainSlider{padding: 0;}
 .swiper-container {
   width: 100%;
+  height: 100%;
   padding: 0 15px 0 15px;
   margin: 0;
   overflow: hidden;
@@ -2264,15 +2266,24 @@ position: relative;
     padding: 30px 0 0 0 !important;
   }
 }
-@media screen and (max-width:767px) {
+@media screen and (max-width:1199px) {
 .swiper-slide {
   height: 100%;
-    padding: 10vw 0 0 0;
+    padding: 20vw 0 0 0;
 }
 .swiper-slide-active {
-  padding: 3vw 0 0 0 !important;
+  padding: 10vw 0 0 0 !important;
 }
 }
+@media screen and (max-width:767px) {
+  .swiper-slide {
+    height: 100%;
+      padding: 10vw 0 0 0;
+  }
+  .swiper-slide-active {
+    padding: 3vw 0 0 0 !important;
+  }
+  }
 .swiper-slide a {
   position: relative;
   display: block;
@@ -2297,13 +2308,6 @@ position: relative;
   -o-transform: scale(1) translate3d(0,0,0) translateZ(0px);
   z-index: 2;
 }
-
-.swiper-slide .imgBx img {
-  width: 100%;
-  height: auto;
-
-}
-
 .swiper-slide-active .imgBx {
   transform:scale(1.3) translate3d(0,0,0) translateZ(0px);
   height: auto;
@@ -2312,7 +2316,10 @@ position: relative;
   -ms-transform:scale(1.3) translate3d(0,0,0) translateZ(0px);
   -o-transform:scale(1.3) translate3d(0,0,0) translateZ(0px);
 }
-
+.swiper-slide .imgBx img {
+  width: 100%;
+  height: auto;
+}
 .swiper-slide-active .imgBx img {
   position: relative;
   width: 100%;
@@ -2322,14 +2329,60 @@ position: relative;
   -webkit-animation: grid_off1 1.5s ease-in-out forwards;
   transform-box: fill-box;
 }
+@media screen and (max-width:1600px) and (min-width:1366px) {
+  .swiper-slide .imgBx {
+    width: 210px;
+  }
+}
 
+@media screen and (max-width:1365px) and (min-width:1200px) {
+  .swiper-slide .imgBx {
+    width: 180px;
+  }
+}
+
+@media screen and (max-width:1199px) {
+  .swiper-slide .imgBx {
+    width: 260px;
+  }
+}
+
+@media screen and (max-width:767px) {
+  .swiper-slide .imgBx {
+    width: 80%;
+    margin: 0 auto 1.5rem auto;
+    transition: none;
+    -webkit-transition: none;
+    -moz-transition: none;
+    -ms-transition: none;
+    -o-transition: none;
+  }
+
+  .swiper-slide-active .imgBx {
+    margin: 0 auto 0 auto;
+  }
+
+
+
+  .swiper-slide-active .imgBx img {
+    animation: none;
+    -webkit-animation: none;
+  }
+}
+
+@media screen and (max-width:375px) {
+  .swiper-slide .imgBx {
+    width: 80%;
+    margin: 0 auto .5rem auto;
+  }
+}
 .swiper-slide .imgBx-subtit {
   font-family: var(--PV-font);
   display: flex;
   align-items: center;
   justify-content: center;
   position: absolute;
-  top: -15px;
+  top: -20px;
   right: -18px;
   z-index: 99;
   height: 120px;
@@ -2363,11 +2416,14 @@ position: relative;
   padding: 0 30px;
   transition: all .6s ease-in-out;
   -webkit-transition: all .6s ease-in-out;
-  transform: translateY(0px);  
+  transform: translateY(0px);
   -webkit-transform: translateY(0px);
   -moz-transform: translateY(0px);
   -ms-transform: translateY(0px);
   -o-transform: translateY(0px);
+  -moz-transition: all .6s ease-in-out;
+  -ms-transition: all .6s ease-in-out;
+  -o-transition: all .6s ease-in-out;
 }
 .swiper-slide-active .info {
   display: block;
@@ -2428,8 +2484,6 @@ position: relative;
 }
 
  @media screen and (max-width:1600px) and (min-width:1366px){
-  .swiper-slide .imgBx {
-    width: 210px;}
     .swiper-slide-active .info {
       transform:translateY(40px);
       -webkit-transform:translateY(40px);
@@ -2461,8 +2515,6 @@ position: relative;
 }
 }
  @media screen and (max-width:1365px) and (min-width:1200px){
-  .swiper-slide .imgBx {
-    width: 180px;}
 .swiper-slide-active .info {
       display: block;
       box-sizing: border-box;
@@ -2496,8 +2548,6 @@ position: relative;
 }
 }
 @media screen and (max-width:1199px) {
-  .swiper-slide .imgBx {
-    width: 260px;}
 .swiper-slide-active .info {
       display: block;
       box-sizing: border-box;
@@ -2507,43 +2557,15 @@ position: relative;
       -ms-transform:translateY(30px);
       -o-transform:translateY(30px);
 }
-  .swiper-slide .info h3 {
-    font-size: 1rem;
-    line-height: 1.5rem;
-  }
-  .swiper-slide-active .info h3 {
-    line-height: 1.6rem;
-    font-size: 1.2rem;
-    max-height: 3.5rem;}
-  .swiper-slide .imgBx-subtit {
-    top: -8px;
-    right: -18px;
-    height: 100px;
-    width: 100px;
-    padding: 0 12px;
-    font-size: 1.2rem;
-    line-height: 1.5rem;
-}
 }
 @media screen and (max-width:767px){
-  .swiper-slide-active .imgBx img{
-    animation: none;
-    -webkit-animation: none;
-  }
-  .swiper-slide .imgBx {
-    width: 80%;
-    margin: 0 auto 1.5rem auto;
+  .swiper-slide .info {
     transition: none;
     -webkit-transition: none;
     -moz-transition: none;
     -ms-transition: none;
     -o-transition: none;
-}
-     
-  .swiper-slide-active .imgBx {
-      margin: 0 auto 0 auto;}
-      .swiper-slide .info { transition:none; -webkit-transition:none; -moz-transition:none; -ms-transition:none; -o-transition:none;
-} 
+  }
   .swiper-slide .info h3 {
     font-size: .9rem;
     line-height: 1.2rem;
@@ -2558,6 +2580,35 @@ position: relative;
   .swiper-slide-active .info span strong {
         font-size:1.6rem;
         line-height: 2rem;}
+  .swiper-slide .imgBx-subtit {
+          top: -15px;
+          right: -18px;
+          height: 100px;
+          width: 100px;
+          padding: 0 12px;
+          font-size: 1.2rem;
+          line-height: 1.5rem;
+      }
+      .swiper-slide-active .imgBx-subtit {
+        animation: none;
+        -webkit-animation: none;
+}  
+}
+@media screen and (max-width:375px){
+  .swiper-slide .info h3 {
+    font-size: .9rem;
+    line-height: 1.2rem;
+  }
+  .swiper-slide-active .info h3 {
+    line-height: 1rem;
+    font-size: .9rem;
+    max-height: 2rem;}
+  .swiper-slide-active .info span {
+      font-size:.9rem;
+      line-height: 1.5rem; height: 1.5rem;}
+  .swiper-slide-active .info span strong {
+        font-size:1.1rem;
+        line-height: 1.5rem;}
   .swiper-slide .imgBx-subtit {
           top: -15px;
           right: -18px;
