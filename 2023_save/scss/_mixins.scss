@@ -1,0 +1,86 @@
+$keyRed: #d32226;
+$keyBlue: #158bca;
+$lightBlue: #00b0ec;
+$mediumBlue: #cce6f8;
+$grayBlue: #dfeff5;
+$borderGray: #CCCCCC;
+$textGray: #3f3f3f;
+$lightGray: #f2f2f2;
+$btnGray: #818181;
+$labelGray: #a2a2a2;
+$mediumGrey: #dcdcdc;
+$modalGrey: #f7f7f7;
+
+// -- media query
+$size: (
+  maxDesktop: '1920px',
+  noteBook: '1600px',
+  padXXL: '1366px',
+  padXL: '1024px',
+  pad: '992px',
+  mobileXL: '767px',
+  mobileS: '360px',
+);
+
+@media only screen and (max-width:#{map-get($size,pad)}) {
+}
+
+
+//
+// clearfix
+//
+@mixin clearfix {
+  & {
+    zoom: 1;
+  }
+  &:after {
+    content: ".";
+    display: block;
+    clear: both;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+  }
+}
+@mixin clearself {
+  overflow: hidden;
+}
+//
+// font-family
+//
+@mixin number-font {
+  font-family: Helvetica, Arial, sans-serif;
+}
+@mixin font-size($sizeValue) {
+  font-size: ($sizeValue) + px;
+  line-height: ($sizeValue * 1.6) + px;
+}
+@mixin light-box-setting($width, $height, $position) {
+  top: 50%;
+  left: 50%;
+  width: $width - 30;
+  height: $height - 30;
+  margin-left: ($width - 30)/2 * -1;
+  margin-top: ($height - 30)/2 * -1;
+  position: $position;
+}
+@mixin setMediaQueries($media) {
+  @if $media == pc {
+    @media only screen and (min-width: 1024px) { @content; }
+  }
+  @else if $media == pad_h {
+    @media only screen and (min-width: 991px) and (max-width: 1023px)  { @content; }
+  }
+  @else if $media == pad_v {
+    @media only screen and (min-width: 768px) and (max-width: 991px) { @content; }
+  }
+  @else if $media == phone {
+    @media only screen and (min-width: 0px) and (max-width: 767px) { @content; }
+  }
+}
+
+@mixin buttonPressShadow  {
+  webkit-box-shadow: inset 3px 3px 2px 0px rgba(0,0,0,0.1);
+  -moz-box-shadow: inset 3px 3px 2px 0px rgba(0,0,0,0.1);
+  box-shadow: inset 3px 3px 2px 0px rgba(0,0,0,0.1);
+}
