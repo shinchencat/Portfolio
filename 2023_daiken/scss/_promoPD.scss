@@ -1,0 +1,116 @@
+$brandColor:#03446d;
+ul.promo {
+    img {
+        padding: 0 5px;
+        border-radius: 1rem 1rem 0 0;
+    }
+    li {
+        margin-bottom: 20px;
+        &:hover {
+            a {
+                top: -6px;
+                box-shadow: 0 0 10px rgba($color: #000000, $alpha: .2);
+            }
+            .icon {
+                top: -1px;
+                transition: all .3s ease;
+            }
+            .hotline {
+                background: $brandColor;
+                transition: all .3s ease;
+            }
+        }
+    }
+    a {
+        display: block;
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+        position: relative;
+        top: 0;
+        padding: 5px 0 3rem;
+        border-radius: 1rem;
+        background-color: #fff;
+        text-align: center;
+        font-size: 1.2rem;
+        line-height: 1.8rem;
+        text-decoration: none;
+        transition: .3s all;
+    }
+    .icon {
+        width: 3rem;
+        height: 5rem;
+        padding: 0 0.2rem 1rem;
+        position: absolute;
+        right: 1rem;
+        top: -5rem;
+        background: $brandColor;
+        border-radius: 0 0 50px 50px;
+        transition: all .3s ease;
+        opacity: .9;
+    }
+    .hotline {
+        background-color: #898989;
+        color: #fff;
+        padding: 8px 3px;
+        margin: 5px 0;
+        transition: all .3s ease;
+    }
+    .pd_title {
+        color: #454545;
+        margin-bottom: 8px;
+        padding: 0 5px;
+    }
+    .price {
+        font-size: 135%;
+        color: #c90016;
+        font-weight: bold;
+        position: absolute;
+        width: 100%;
+        left: 0;
+        bottom: 5px;
+        i {
+            font-weight: normal;
+            font-style: normal;
+            vertical-align: 0;
+            color: #454545;
+            font-size: 70%;
+            text-decoration: line-through;
+            padding-right: 3px;
+        }
+        small {
+            font-weight: normal;
+            font-size: 65%;
+            vertical-align: 0;
+        }
+    }
+}
+
+@media only screen and (max-width: 1440px) {
+    ul.promo a {
+        font-size: 1.3rem;
+        line-height: 1.8rem;
+    }
+}
+@media only screen and (max-width: 768px) {
+    ul.promo {
+        margin-right: -10px;
+        margin-left: -10px;
+        .col-md-6, .col-6 {
+            padding: 0 10px;
+        }
+    }
+}
+@media only screen and (max-width: 767px) {
+    ul.promo {
+        margin-right: -5px;
+        margin-left: -5px;
+        a {
+            font-size: 1.1rem;
+            line-height: 1.6rem;
+        }
+         .col-md-6, .col-6 {
+            padding: 0 5px;
+        }
+    }
+}
