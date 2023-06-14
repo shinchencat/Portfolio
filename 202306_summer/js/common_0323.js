@@ -159,55 +159,55 @@ document.addEventListener('DOMContentLoaded', function(event) {
 // });
 
 
-document.addEventListener("DOMContentLoaded", function() {
+// document.addEventListener("DOMContentLoaded", function() {
 
 
 //.play-smile
-	gsap.from(".play-smile", {
-scrollTrigger: {
-  trigger: ".play-smile",
-  start: "top 90%", // 修改为top 70%
-  end: "bottom 30%",
-  scrub: true,
-},
-opacity: 0,
-duration: 1,
-y: -100, // 修改为Y方向向上位移100
-rotation: 720 // 修改为旋转两圈（720度）
-});
-//.play-smile2
-gsap.from(".play-smile2", {
-scrollTrigger: {
-  trigger: ".play-smile2",
-  start: "top 80%", // 修改为top 70%
-  end: "bottom 30%",
-  scrub: true,
-},
-opacity: 0,
-duration: 1,
-y: -100, // 修改为Y方向向上位移100
-rotation: 720 // 修改为旋转两圈（720度）
-});
-//.cont-bar-right
-gsap.from(".cont-bar-right", {
-	scrollTrigger: {
-	  trigger: ".cont-bar-right",
-	  start: "top 100%", // 修改为top 70%
-	  end: "bottom 30%",
-	  scrub: true,
-	},
-	duration: 3,
-	yPercent: 80
-	});
-//.cont-bar-left
-gsap.from(".cont-bar-left", {
-	scrollTrigger: {
-	  trigger: ".cont-bar-left",
-	  start: "top 100%", // 修改为top 70%
-	  end: "bottom 30%",
-	  scrub: true,
-	},
-	duration: 3,
-	yPercent: 80
-	});
-});
+// 	gsap.from(".play-smile", {
+// scrollTrigger: {
+//   trigger: ".play-smile",
+//   start: "top 90%", // 修改为top 70%
+//   end: "bottom 30%",
+//   scrub: true,
+// },
+// opacity: 0,
+// duration: 1,
+// y: -100, // 修改为Y方向向上位移100
+// rotation: 720 // 修改为旋转两圈（720度）
+// });
+// //.play-smile2
+// gsap.from(".play-smile2", {
+// scrollTrigger: {
+//   trigger: ".play-smile2",
+//   start: "top 80%", // 修改为top 70%
+//   end: "bottom 30%",
+//   scrub: true,
+// },
+// opacity: 0,
+// duration: 1,
+// y: -100, // 修改为Y方向向上位移100
+// rotation: 720 // 修改为旋转两圈（720度）
+// });
+// //.cont-bar-right
+// gsap.from(".cont-bar-right", {
+// 	scrollTrigger: {
+// 	  trigger: ".cont-bar-right",
+// 	  start: "top 100%", // 修改为top 70%
+// 	  end: "bottom 30%",
+// 	  scrub: true,
+// 	},
+// 	duration: 3,
+// 	yPercent: 80
+// 	});
+// //.cont-bar-left
+// gsap.from(".cont-bar-left", {
+// 	scrollTrigger: {
+// 	  trigger: ".cont-bar-left",
+// 	  start: "top 100%", // 修改为top 70%
+// 	  end: "bottom 30%",
+// 	  scrub: true,
+// 	},
+// 	duration: 3,
+// 	yPercent: 80
+// 	});
+// });
