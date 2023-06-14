@@ -1,0 +1,121 @@
+
+.header {
+	height: 40px;
+	background-color: #fff;
+	padding: 0;
+	position: relative;
+	z-index: 99;
+	font-size: 12px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, .25);
+	@media only screen and (max-width: 1023px) {
+		box-shadow: none;
+		position: fixed;
+		top: 0;
+		background: #e54040;
+		img {
+			filter: brightness(0) invert(1);
+		}
+		&.act {
+			z-index: 998;
+		}
+	}
+	li {
+		position: relative;
+		color: $textGray;
+		@media only screen and (max-width: 1024px) {
+			margin-top: -2px;
+			transform: scale(0.92);
+			&:nth-child(1) {
+				margin-right: -30px;
+			}
+		}
+		a, span {
+			display: block;
+		}
+	}
+	li img {
+		height: 40px;
+		width: auto;
+		display: block;
+	}
+	a, .appDonload span {
+		display: block;
+		color: #a9a9a9;
+		text-decoration: none;
+	}
+	li.note,
+	li.appDonload,
+	li.social {
+		padding: 17px 2px 0;
+	}
+	li.appDonload {
+		padding: 17px 7px 0;
+		cursor: pointer;
+		img {
+			display: block;
+			width: 100%;
+			height: auto;
+		}
+		span {
+			color: #dd0202;
+		}
+		.appQRcode {
+			position: absolute;
+			z-index: 9999;
+			top: 100%;
+			width: 160px;
+			right: -9px;
+			padding: 8px;
+			background: #fff;
+			box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.15);
+			border: 1px solid rgba(0, 0, 0, .15);
+			border-radius: 4px;
+			display: none;
+		}
+	}
+	li.appDonload::before, li.appDonload::after {
+		content: '';
+		position: absolute;
+		width: 1px;
+		height: 15px;
+		background-color: #ccc;
+		bottom: 6px;
+		left: 2px;
+	}
+	li.appDonload::after {
+		left: auto;
+		right: 2px;
+	}
+	li.appDonload:hover .appQRcode {
+		display: block;
+	}
+	li.appDonload:hover span {
+		color: #039ce1;
+	}
+	li.icons {
+		padding: 2px 0 0 2px;
+		a {
+			display: inline-block;
+		}
+		img {
+			width: 25px;
+		}
+	}
+	.pc {
+		@media only screen and (max-width: 1023px) {
+			display: none !important;
+		}
+	}
+	.mb {
+		display: none !important;
+		@media only screen and (max-width: 1023px) {
+			display: flex !important;
+			margin: 0;
+			justify-content: center;
+			align-items: center;
+		}
+		img {
+			height: 25px;
+		}
+	}
+}
